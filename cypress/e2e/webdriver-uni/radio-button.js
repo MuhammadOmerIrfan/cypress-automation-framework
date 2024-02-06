@@ -18,7 +18,6 @@ describe("Verify radiobutton via webdriveruni", () => {
         cy.get('#radio-buttons').find("[type='radio']").first().check()    // selecting the first radiobutton
         cy.get('#radio-buttons').find("[type='radio']").eq(1).check()    // selecting the second radiobutton
 
-
     })
 
     it("Validate the states of radiobutton", () => {
