@@ -8,10 +8,10 @@
     "triggerAllTest-headless": "npx cypress run",
     "triggerAllTest-headed": "npx cypress run --headed",
     "triggerAllTest-chrome": "npx cypress run --browser chrome",
-    "triggerAllTest-dashboard": "npx cypress run --record --key 70bc6b76-c966-4db7-843a-7f4c2acce91b",
+    "triggerAllTest-dashboard": "npx cypress run --record --key ba0a59e1-0df4-488b-bb13-daf2b8cdb324",
     "triggerAllTest-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*",
     "triggerAllTest-autostore": "npx cypress run --spec cypress/e2e/automation-test-store/*",
-    "triggerAllTest-autostore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key 70bc6b76-c966-4db7-843a-7f4c2acce91b",
+    "triggerAllTest-autostore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key ba0a59e1-0df4-488b-bb13-daf2b8cdb324",
     "cypress-multi-browser": "npm run triggerAllTest-autostore -- --browser electron --headed & npm run triggerAllTest-autostore -- --browser edge --headed",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-reports": "rm -rf cypress/results/junit/results.xml",
@@ -21,7 +21,7 @@
     "cypress-regression-pack" : "npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTest-headless && npm run mochawesome-merge"
 
   },
-  "author": "Omer Irfan",
+  "author": "Muhammad Ali",
   "license": "ISC",
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
