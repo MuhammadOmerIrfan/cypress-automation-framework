@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
-  projectId: "oohp5e",
+  projectId: "4qkjxa",
   e2e: {
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
