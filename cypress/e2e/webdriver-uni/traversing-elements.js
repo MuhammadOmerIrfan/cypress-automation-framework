@@ -33,20 +33,25 @@ describe("Traversing DOM elements in Cypress", () => {
     cy.get(".traversal-table > tbody > tr > td").first().should('contain','Andy')
   });
 
-  it.only("last() to retrieve the last DOM element within elements", () => {
+  it("last() to retrieve the last DOM element within elements", () => {
     cy.get(".traversal-table > tbody > tr > td").last().should('contain','Scott')
   });
 
   it("nextAll() to get all of the next sibling DOM elements within elements", () => {
+    cy.get(".traversal-drinks-list").contains('Tea').nextAll().should('have.length',3)
   });
 
   it("nextUntil() to get all of the next sibling DOM elements within elements until another element", () => {
+    cy.get("#coffee").nextUntil("#milk")
+    
   });
 
   it("not() to remove DOM element(s) from the set of elements", () => {
+    cy.get(".traversal-button-states > button").not(".disabled").should("not.have.class","disabled")
   });
 
-  it("parent() To get parent DOM element of elements", () => {
+  it.only("parent() To get parent DOM element of elements", () => {
+    
   });
 
   it("parents() to get parents DOM element of elements", () => {
