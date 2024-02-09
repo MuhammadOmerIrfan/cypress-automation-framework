@@ -50,23 +50,27 @@ describe("Traversing DOM elements in Cypress", () => {
     cy.get(".traversal-button-states > button").not(".disabled").should("not.have.class","disabled")
   });
 
-  it("parent() To get parent DOM element of elements", () => {  //to get parent
+  it("parent() To get parent DOM element of elements", () => {  //to get parent-
     cy.get(".traversal-mark").parent().should('contain','Lorem ipsum dolor sit amet,')
   });
 
-  it.only("parents() to get parents DOM element of elements", () => {
+  it("parents() to get parents DOM element of elements", () => {
     cy.get(".traversal-cite").parents().should('match','blockquote')   // to get grandmother
   });
 
   it("prev() to get the previous sibling DOM element within elements", () => {
+    cy.get("#sugar").prev().should('contain','Espresso')
   });
 
   it("prevAll() to get all previous sibling DOM elements within elements", () => {
+    cy.get(".sales").prevAll().should('have.length',2) //  to get previous childs
   });
 
   it("prevUntil() to get all previous sibling DOM elements within elements until other element", () => {
+    cy.get("#veggie").prevUntil("#fruits").should('have.length',5) // get previous childs until #id appears
   });
 
-  it("siblings() To get all sibling DOM elements of elements", () => {
+  it.only("siblings() To get all sibling DOM elements of elements", () => {
+    cy.get(".traversal-button-other-states .active").siblings().should('have.length','3') // get to class then first element then siblings will be get
   });
 });
