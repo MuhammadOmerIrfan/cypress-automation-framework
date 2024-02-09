@@ -1,12 +1,10 @@
 import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
 
-let stub;
+let stub;   
 
 Before(() =>{
     cy.log("Executing before setps")
-    stub = cy.stub()
-
-
+    stub = cy.stub()  // initialize the stub 
 })
 
 Given('I access the WebdriverUniversity Login Portal Page', ()=>{
@@ -29,11 +27,17 @@ And('I click on the login button',()=>{
 })
 
 
-Then('I should be presented with the following message {word} {word}',(message1, message2)=>{
+// Then('I should be presented with the following message {word} {word}',(message, message2)=>{
+//     const expectedMessage = message + " " + message2;
+//     cy.log(expectedMessage)
+//     cy.log(stub.getCall(0))
+//     expect(stub.getCall(0)).to.be.calledWith(expectedMessage)
 
-    const expectedMessage = message1 + " " + message2;
-    cy.log(expectedMessage)
-    cy.log(stub.getCall(0))
-    expect(stub.getCall(0)).to.be.calledWith(expectedMessage)
+// })
 
+Then('I should be presented with the following message {word} {word}', (message, message2) => {
+    const expectedMessage = message + " " + message2;
+    cy.log(expectedMessage);
+    cy.log(stub.getCall(0));
+    expect(stub.getCall(0)).to.be.calledWith(expectedMessage);
 })
