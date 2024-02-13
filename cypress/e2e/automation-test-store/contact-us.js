@@ -1,5 +1,5 @@
 /// <reference types ="Cypress" />
-// /// <reference types ="Cypress-xpath" />
+ /// <reference types ="Cypress-xpath" />
 
 
 describe("Test Conact us form via the Automation Test Store", ()=>{
