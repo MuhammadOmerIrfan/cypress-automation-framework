@@ -2,7 +2,7 @@
  /// <reference types ="Cypress-xpath" />
 
 
-describe("Test Conact us the form via the Automation Test Store", ()=>{
+describe("Test Contact us a form via the Automation Test Store", ()=>{
 
     before(function(){
         cy.fixture('userDetails').as("user") // fixtures and aliases
