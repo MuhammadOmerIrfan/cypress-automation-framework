@@ -1,8 +1,9 @@
 /// <reference types ="Cypress" />
-// /// <reference types ="Cypress-xpath" />
+ /// <reference types ="Cypress-xpath" />
 
 
-describe("Test Conact us a form via the Automation Test Store", ()=>{
+describe("Test Contact us the form via the Automation Test Store", ()=>{
+
 
     before(function(){
         cy.fixture('userDetails').as("user") // fixtures and aliases

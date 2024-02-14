@@ -12,6 +12,7 @@
     "triggerAllTest-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*",
     "triggerAllTest-autostore": "npx cypress run --spec cypress/e2e/automation-test-store/*",
     "triggerAllTest-autostore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key 70bc6b76-c966-4db7-843a-7f4c2acce91b",
+    "triggerAllTest-cucumberTests": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature --browser chrome",
     "cypress-multi-browser": "npm run triggerAllTest-autostore -- --browser electron --headed & npm run triggerAllTest-autostore -- --browser edge --headed",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-reports": "rm -rf cypress/results/junit/results.xml",
