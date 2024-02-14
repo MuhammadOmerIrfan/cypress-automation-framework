@@ -4,7 +4,6 @@
 
 describe("Test Contact us the form via the Automation Test Store", ()=>{
 
-
     before(function(){
         cy.fixture('userDetails').as("user") // fixtures and aliases
         })
